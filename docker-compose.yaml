@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  myapp-dev:
+    image: nginx
+    volumes:
+      - ./built-better:/usr/share/nginx/html
+    ports:
+      - "8082:80"
+
+  myapp-prod:
+    image: nginx
+    volumes:
+      - ./built-better:/usr/share/nginx/html
+    ports:
+      - "8083:80"
